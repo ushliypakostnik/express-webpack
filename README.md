@@ -1,8 +1,5 @@
-Express start project with Webpack bundler and Vue
-==================================================
-
-Стартовый проект на Express c Webpack и Vue. C Nunjucks, SCSS, Fontello. С ES и style линтерами и Hot Reloading в режиме разработки.
-
+Express project on Babel with Webpack bundler
+=============================================
 
 Deploy
 ------

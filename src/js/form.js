@@ -14,14 +14,14 @@ const Form = (() => {
   const field2 = document.getElementById('field2');
 
   const getData = () => {
-    logger.info('get data');
-    return axios.get(`${config.API_URL}/test`)
+    logger.info('request data');
+    return axios.get(`${config.API_URL}/gettest`)
       .then((response) => {
-        logger.info('get response');
+        logger.info('request data success');
         return response.data;
       })
       .catch((err) => {
-        logger.info('get err');
+        logger.info('request data failed');
         return err.message;
       });
   };

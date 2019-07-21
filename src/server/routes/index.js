@@ -9,8 +9,7 @@ const router = Router();
 
 // API
 
-router.get('/test', (req, res, next) => {
-  console.log('Пришел запрос по API');
+router.get('/gettest', (req, res, next) => {
   if (fs.existsSync(path.resolve(__dirname, './test.txt'))) {
     console.log('Found test file');
     const TEST_FILE = toJSON(fs.readFileSync(path.resolve(__dirname, './test.txt'), 'utf8'));
@@ -20,6 +19,10 @@ router.get('/test', (req, res, next) => {
     console.log('Not found test file');
     return res.sendStatus(400);
   }
+});
+
+router.get('/posttest', (req, res, next) => {
+  // fs.writeFileSync(path.resolve(__dirname, './hello.txt'), JSON.stringify(TEST_FILE));
 });
 
 // Others

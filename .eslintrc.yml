@@ -1,0 +1,16 @@
+plugins:
+  - babel
+  - jest
+env:
+  node: true
+  jest: true
+globals:
+  window: true
+  document: true
+  console: true
+parser: vue-eslint-parser
+extends:
+  - 'airbnb-base'
+  - 'plugin:jest/recommended'
+rules:
+  no-console: off

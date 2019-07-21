@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "cc2dfc8e2b74b3b7a20a";
+/******/ 	var hotCurrentHash = "92bec4b44cc9d576900b";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5541,7 +5541,6 @@ var Form = function () {
   };
 
   var postData = function postData(data) {
-    // eslint-disable-line no-unused-vars
     logger.info('post data');
     return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/post"), {
       data: data
@@ -5555,7 +5554,6 @@ var Form = function () {
   };
 
   var postJSON = function postJSON(data) {
-    // eslint-disable-line no-unused-vars
     logger.info('post json');
     return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/test"), {
       data: data
@@ -5570,8 +5568,7 @@ var Form = function () {
 
   var init = function init() {
     logger.info('init');
-    getData() // eslint-disable-line no-unused-vars
-    .then(function (response) {
+    getData().then(function (response) {
       Object.keys(response).forEach(function (key) {
         fields[key] = document.getElementById(key);
         fields[key].value = response[key];

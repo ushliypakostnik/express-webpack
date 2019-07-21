@@ -26,7 +26,7 @@ const Form = (() => {
       });
   };
 
-  const postData = (data) => { // eslint-disable-line no-unused-vars
+  const postData = (data) => {
     logger.info('post data');
     return axios.post(`${config.API_URL}/post`, { data })
       .then((response) => {
@@ -39,7 +39,7 @@ const Form = (() => {
       });
   };
 
-  const postJSON = (data) => { // eslint-disable-line no-unused-vars
+  const postJSON = (data) => {
     logger.info('post json');
     return axios.post(`${config.API_URL}/test`, { data })
       .then((response) => {
@@ -55,7 +55,7 @@ const Form = (() => {
   const init = () => {
     logger.info('init');
 
-    getData() // eslint-disable-line no-unused-vars
+    getData()
       .then((response) => {
         Object.keys(response).forEach((key) => {
           fields[key] = document.getElementById(key);

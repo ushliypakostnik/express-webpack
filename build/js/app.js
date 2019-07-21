@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c63b18735c641d7cc3ad";
+/******/ 	var hotCurrentHash = "cc2dfc8e2b74b3b7a20a";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -5518,39 +5518,79 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./logger */ "./src/js/logger.js");
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../config */ "./src/config.js");
 
- // eslint-disable-line no-unused-vars
 
 
 
-var logger = new _logger__WEBPACK_IMPORTED_MODULE_2__["default"](path__WEBPACK_IMPORTED_MODULE_0___default.a.basename(__filename, '.js')); // eslint-disable-line no-unused-vars
+var logger = new _logger__WEBPACK_IMPORTED_MODULE_2__["default"](path__WEBPACK_IMPORTED_MODULE_0___default.a.basename(__filename, '.js'));
 
 var Form = function () {
   var NAME = 'Form'; // eslint-disable-line no-unused-vars
 
-  var field1 = document.getElementById('field1'); // eslint-disable-line no-unused-vars
-
-  var field2 = document.getElementById('field2'); // eslint-disable-line no-unused-vars
-  // eslint-disable
+  var submit = document.getElementById('submit');
+  var fields = {};
 
   var getData = function getData() {
-    logger.info('get data');
-    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/test")).then(function (response) {
-      logger.info('get response');
+    logger.info('request data');
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.get("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/get")).then(function (response) {
+      logger.info('request data success');
       return response.data;
     })["catch"](function (err) {
-      logger.info('get err');
+      logger.info('request data failed');
       return err.message;
     });
-  }; // eslint-enable
+  };
 
+  var postData = function postData(data) {
+    // eslint-disable-line no-unused-vars
+    logger.info('post data');
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/post"), {
+      data: data
+    }).then(function (response) {
+      logger.info('post data success');
+      return response.data;
+    })["catch"](function (err) {
+      logger.info('post data failed');
+      return err.message;
+    });
+  };
+
+  var postJSON = function postJSON(data) {
+    // eslint-disable-line no-unused-vars
+    logger.info('post json');
+    return axios__WEBPACK_IMPORTED_MODULE_1___default.a.post("".concat(_config__WEBPACK_IMPORTED_MODULE_3__["default"].API_URL, "/test"), {
+      data: data
+    }).then(function (response) {
+      logger.info('post json success');
+      return response.data;
+    })["catch"](function (err) {
+      logger.info('post json failed');
+      return err.message;
+    });
+  };
 
   var init = function init() {
     logger.info('init');
     getData() // eslint-disable-line no-unused-vars
     .then(function (response) {
-      field1.value = response.field1;
-      field2.value = response.field2;
+      Object.keys(response).forEach(function (key) {
+        fields[key] = document.getElementById(key);
+        fields[key].value = response[key];
+      });
     });
+
+    submit.onclick = function (e) {
+      e.preventDefault();
+      logger.info('submit !!!');
+      var data = {};
+      Object.keys(fields).forEach(function (key) {
+        var _fields$key = fields[key],
+            id = _fields$key.id,
+            value = _fields$key.value;
+        data[id] = value;
+      });
+      postData(data);
+      postJSON(data);
+    };
   };
 
   return {

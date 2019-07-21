@@ -1,2 +1,5 @@
-field1: Здравствуй, новая работа!
-field2: 125 000
+name: Levon
+email: krasavchik@gmail.com
+phone: 8(976)4445678
+theme: Зерно, зернобобовые
+product: Пшеница

@@ -10,12 +10,12 @@ const logger = new Logger(path.basename(__filename, '.js'));
 const Form = (() => {
   const NAME = 'Form'; // eslint-disable-line no-unused-vars
 
-  const field1 = document.getElementById('field1');
-  const field2 = document.getElementById('field2');
+  const submit = document.getElementById('submit');
+  const fields = {};
 
   const getData = () => {
     logger.info('request data');
-    return axios.get(`${config.API_URL}/gettest`)
+    return axios.get(`${config.API_URL}/get`)
       .then((response) => {
         logger.info('request data success');
         return response.data;
@@ -26,14 +26,56 @@ const Form = (() => {
       });
   };
 
+  const postData = (data) => { // eslint-disable-line no-unused-vars
+    logger.info('post data');
+    return axios.post(`${config.API_URL}/post`, { data })
+      .then((response) => {
+        logger.info('post data success');
+        return response.data;
+      })
+      .catch((err) => {
+        logger.info('post data failed');
+        return err.message;
+      });
+  };
+
+  const postJSON = (data) => { // eslint-disable-line no-unused-vars
+    logger.info('post json');
+    return axios.post(`${config.API_URL}/test`, { data })
+      .then((response) => {
+        logger.info('post json success');
+        return response.data;
+      })
+      .catch((err) => {
+        logger.info('post json failed');
+        return err.message;
+      });
+  };
+
   const init = () => {
     logger.info('init');
 
     getData() // eslint-disable-line no-unused-vars
       .then((response) => {
-        field1.value = response.field1;
-        field2.value = response.field2;
+        Object.keys(response).forEach((key) => {
+          fields[key] = document.getElementById(key);
+          fields[key].value = response[key];
+        });
       });
+
+    submit.onclick = (e) => {
+      e.preventDefault();
+      logger.info('submit !!!');
+
+      const data = {};
+      Object.keys(fields).forEach((key) => {
+        const { id, value } = fields[key];
+        data[id] = value;
+      });
+
+      postData(data);
+      postJSON(data);
+    };
   };
 
   return {

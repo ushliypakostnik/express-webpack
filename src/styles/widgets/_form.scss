@@ -5,13 +5,17 @@
 .form-select {
   @extend %nooutline;
   box-sizing: border-box;
-  width: 100%;
   border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: $border-width solid $color_border;
   padding-bottom: 17px;
+  @include size(100%, 56px);
   @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+}
+
+.form-select ~ .form-control {
+  pointer-events: none;
 }
 
 .form-group {
@@ -20,23 +24,11 @@
 
   select {
     position: absolute;
-    top: 5px;
+    top: 0;
     color: transparent;
 
     option {
       color: $color_text;
-    }
-  }
-
-  .form-label-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    color: $color_text_light;
-    @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
-
-    & ~ .form-control {
-      padding-right: 100px;
     }
   }
 
@@ -59,11 +51,32 @@
   color: $color_text_light;
   transition: transform 150ms ease-out, font-size 150ms ease-out;
   @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+  &--right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: $color_text_light;
+    @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+    & ~ .form-control {
+      padding-right: 150px;
+    }
+  }
+
+  &--right-bottom {
+    position: absolute;
+    bottom: -40px;
+    right: 5px;
+    color: $color_text_light;
+    @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+  }
 }
 
 
 .form-label[required] {
   &::after {
+    pointer-events: none;
     content: "";
     position: absolute;
     top: 2px;
@@ -74,16 +87,15 @@
 }
 
 .focused {
-  .form-label { // stylelint-disable-line no-descending-specificity
+  .form-label {
     transform: translateY(-80%);
     font-size: 1.2em;
   }
-  // stylelint-disable
+
   .form-control,
   .form-select {
     border-color: $color_gray_1;
   }
-  // stylelint-enable
 }
 
 .search-wrapper {
@@ -143,3 +155,119 @@
     }
   }
 }
+
+.form-group-group {
+  display: flex;
+
+  > div:nth-of-type(2) {
+    padding-left: $size;
+    padding-right: $size;
+    white-space: nowrap;
+    @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+    line-height: 36px;
+  }
+}
+
+.images {
+  display: flex;
+}
+
+.image {
+  position: relative;
+  border-radius: $border-radius_base;
+  height: 90px;
+  flex-grow: 1;
+
+  &--1,
+  &--2 {
+    background: $color_gray;
+  }
+
+  &--empty {
+    border: 1px solid $color_orange;
+    background: url("#{$image-path}empty.jpg") 50% 50% no-repeat;
+  }
+
+  &:not(:last-child) {
+    margin-right: 10%;
+  }
+
+  &__close {
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    border: 1px solid $color_orange;
+    border-radius: 13px;
+    background: url("#{$image-path}close.jpg") $color_white 50% 50% no-repeat;
+    @include size(26px, 26px);
+  }
+}
+
+.checkbox {
+  position: relative;
+  padding-left: 60px;
+
+  input {
+    position: absolute;
+    visibility: hidden;
+  }
+
+  label {
+    text-align: left;
+    @include text($font-family_sans, round($font-size_xsmall * 0.75), $font-weight_sans_regular);
+
+    .acount-label {
+      position: relative;
+      top: -10px;
+      margin-left: 69%;
+      background: url("#{$image-path}pro.jpg") 50% 50% no-repeat;
+      @include size(34px, 19px);
+    }
+  }
+
+  &__box {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    background: url("#{$image-path}check.jpg") 50% 50% no-repeat;
+    @include size(43px, 42px);
+  }
+}
+
+.capcha {
+  position: relative;
+
+  &__refresh {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background: url("#{$image-path}refresh.jpg") 50% 50% no-repeat;
+    @include size(35px, 31px);
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__part {
+    width: 50%;
+    border: $border_width solid $color_border;
+    border-radius: $border-radius_base;
+
+    &:not(:last-child) {
+      margin-right: 5%;
+    }
+
+    &:first-child {
+      background: url("#{$image-path}capcha.jpg") 50% 50% no-repeat;
+      @include size(215px, 66px);
+    }
+
+    &:last-child {
+      @extend %nooutline;
+      text-align: center;
+      @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+    }
+  }
+}
+

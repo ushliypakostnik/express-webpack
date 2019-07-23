@@ -3,13 +3,8 @@
 
 // Rubber Container
 .container-fluid {
-  padding-left: $size;
-  padding-right: $size;
-
-  @include xs {
-    padding-left: $size / 2;
-    padding-right: $size / 2;
-  }
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .btn-wrapper {
@@ -22,7 +17,7 @@
   &--large {
     cursor: pointer;
     border: none;
-    height: 120px;
+    height: 100px;
     color: $color_white;
     border-radius: 70px;
     padding-left: 50px;

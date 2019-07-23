@@ -10,6 +10,8 @@ const logger = new Logger(path.basename(__filename, '.js'));
 const Form = (() => {
   const NAME = 'Form'; // eslint-disable-line no-unused-vars
 
+  // UI
+
   const fields = {};
 
   const controls = document.getElementsByClassName('form-control');
@@ -21,9 +23,11 @@ const Form = (() => {
   const mores = document.getElementsByClassName('morelink');
   const moresarr = Object.keys(mores).map(k => mores[k]);
 
-  console.log(moresarr);
+  const input = document.getElementById('Текст объявления');
 
   const submit = document.getElementById('submit');
+
+  // API
 
   const getData = () => {
     logger.info('request data');
@@ -64,40 +68,7 @@ const Form = (() => {
       });
   };
 
-  const init = () => {
-    logger.info('init');
-
-    // Получение данных
-    getData()
-      .then((response) => {
-        Object.keys(response).forEach((key) => {
-          fields[key] = document.getElementById(key);
-          if (fields[key]) {
-            if (response[key]) {
-              fields[key].value = response[key];
-              fields[key].closest('.form-group').classList.add('focused');
-            }
-          }
-        });
-      });
-
-    // Сабмит формы
-    submit.onclick = (e) => {
-      logger.info('submit !!!');
-      e.preventDefault();
-
-      const data = {};
-      Object.keys(fields).forEach((key) => {
-        if (fields[key]) {
-          const { id, value } = fields[key];
-          data[id] = value;
-        }
-      });
-
-      postData(data);
-      postJSON(data);
-    };
-
+  const ready = () => {
     // Селекты
     selectsarr.forEach((element) => {
       element.addEventListener('change', () => {
@@ -110,7 +81,6 @@ const Form = (() => {
 
     // Больше
     moresarr.forEach((element) => {
-      console.log(element);
       element.addEventListener('click', (e) => {
         logger.info('click');
         e.preventDefault();
@@ -137,6 +107,61 @@ const Form = (() => {
         }
       });
     });
+
+    // Текст объявления
+    const c = input.value.length;
+    const v = input.nextElementSibling.children[0];
+    v.innerHTML = c;
+    input.oninput = (e) => {
+      logger.info('input !!!');
+      const counter = input.value.length;
+      if (counter > 999) {
+        e.preventDefault();
+      } else {
+        const value = input.nextElementSibling.children[0];
+        value.innerHTML = counter;
+      }
+    };
+
+    window.onclick = (e) => {
+      console.log(e);
+    };
+
+    // Сабмит формы
+    submit.onclick = (e) => {
+      logger.info('submit !!!');
+      e.preventDefault();
+
+      const data = {};
+      Object.keys(fields).forEach((key) => {
+        if (fields[key]) {
+          const { id, value } = fields[key]; // eslint-disable-line no-shadow
+          data[id] = value;
+        }
+      });
+
+      postData(data);
+      postJSON(data);
+    };
+  };
+
+  const init = () => {
+    logger.info('init');
+
+    // Получение данных
+    getData()
+      .then((response) => {
+        Object.keys(response).forEach((key) => {
+          fields[key] = document.getElementById(key);
+          if (fields[key]) {
+            if (response[key]) {
+              fields[key].value = response[key];
+              fields[key].closest('.form-group').classList.add('focused');
+            }
+          }
+        });
+        ready();
+      });
   };
 
   return {

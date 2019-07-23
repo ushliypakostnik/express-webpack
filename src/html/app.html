@@ -31,11 +31,11 @@
 </head>
 <body>
   <div class="page__wrapper">
-    <div class="page__header">
+    <header class="page__header">
       <div class="search-wrapper">
         <input type="text" class="search-control" placeholder="Поиск" />
       </div>
-    </div>
+    </header>
     <form class="form">
       <section class="page__section" id="section1">
         <div class="container-fluid">
@@ -65,57 +65,57 @@
           <div class="form-group">
             <span class="form-group__arrow"></span>
             <label class="form-label" for="Рубрика">Рубрика</label>
-            <input type="text" class="form-control" id="Рубрика" />
             <select class="form-select" for="Рубрика">
               <option selected="selected" value="">1</option>
               <option value="1">2</option>
               <option value="3">3</option>
               <option value="4">5</option>
             </select>
+            <input type="text" class="form-control" id="Рубрика" />
           </div>
           <div class="form-group">
             <span class="form-group__arrow"></span>
             <label class="form-label" for="Товар">Товар</label>
-            <input type="text" class="form-control" id="Товар" />
             <select class="form-select" for="Товар">
               <option selected="selected" value="">1</option>
               <option value="1">2</option>
               <option value="3">3</option>
               <option value="4">5</option>
             </select>
+            <input type="text" class="form-control" id="Товар" />
           </div>
           <div class="form-group">
             <span class="form-group__arrow"></span>
             <label class="form-label" for="Поставка" required>Поставка</label>
-            <input type="text" class="form-control" id="Поставка" required />
             <select class="form-select" for="Поставка">
               <option selected="selected" value="">1</option>
               <option value="1">2</option>
               <option value="3">3</option>
               <option value="4">5</option>
             </select>
+            <input type="text" class="form-control" id="Поставка" required />
           </div>
           <div class="form-group">
             <span class="form-group__arrow"></span>
             <label class="form-label" for="Тип" required>Тип</label>
-            <input type="text" class="form-control" id="Тип" required />
             <select class="form-select" for="Тип">
               <option selected="selected" value="">1</option>
               <option value="1">2</option>
               <option value="3">3</option>
               <option value="4">5</option>
             </select>
+            <input type="text" class="form-control" id="Тип" required />
           </div>
           <div class="form-group">
             <span class="form-group__arrow"></span>
             <label class="form-label" for="Класс" required>Класс</label>
-            <input type="text" class="form-control" id="Класс" required />
             <select class="form-select" for="Класс">
               <option selected="selected" value="">1</option>
               <option value="1">2</option>
               <option value="3">3</option>
               <option value="4">5</option>
             </select>
+            <input type="text" class="form-control" id="Класс" required />
           </div>
           <div class="form-group">
             <label class="form-label" for="Дата урожая">Дата урожая</label>
@@ -123,12 +123,12 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="Влажность">Влажность</label>
-            <span class="form-label-right">от 1 до 100</span>
+            <span class="form-label--right">от 1 до 100</span>
             <input type="text" class="form-control" id="Влажность" />
           </div>
           <div class="form-group">
             <label class="form-label" for="Сорная примесь">Сорная примесь</label>
-            <span class="form-label-right">от 1 до 100</span>
+            <span class="form-label--right">от 1 до 100</span>
             <input type="text" class="form-control" id="Сорная примесь" />
           </div>
           <div class="section__morelink">
@@ -160,16 +160,112 @@
             <label class="form-label" for="Город">Город</label>
             <input type="text" class="form-control" id="Город" />
           </div>
+          <div class="form-group-group">
+            <div class="form-group">
+              <label class="form-label" for="Цена розн.">Цена розн.</label>
+              <input type="text" class="form-control" id="Цена розн." />
+            </div>
+            <div class="form-group">
+              <div class="">руб. за</div>
+            </div>
+            <div class="form-group">
+              <span class="form-group__arrow"></span>
+              <label class="form-label" for="Поле4">Выбрать</label>
+              <select class="form-select" for="Поле4">
+                <option selected="selected" value="">1</option>
+                <option value="1">2</option>
+                <option value="3">3</option>
+                <option value="4">5</option>
+              </select>
+              <input type="text" class="form-control" id="Поле4" />
+            </div>
+          </div>
+          <div class="form-group-group">
+            <div class="form-group">
+              <label class="form-label" for="Цена оnт">Цена оnт</label>
+              <input type="text" class="form-control" id="Цена оnт" />
+            </div>
+            <div class="form-group">
+              <div class="">руб. за</div>
+            </div>
+            <div class="form-group">
+              <span class="form-group__arrow"></span>
+              <label class="form-label" for="Поле5">Выбрать</label>
+              <select class="form-select" for="Поле5">
+                <option selected="selected" value="">1</option>
+                <option value="1">2</option>
+                <option value="3">3</option>
+                <option value="4">5</option>
+              </select>
+              <input type="text" class="form-control" id="Поле5" />
+            </div>
+          </div>
           <div class="form-group">
             <label class="form-label" for="Текст объявления">Текст объявления</label>
             <input type="text" class="form-control" id="Текст объявления" />
+            <span class="form-label--right-bottom"><span></span>/1000</span>
           </div>
+        </div>
+      </section>
+      <section class="page__section" id="section4">
+        <div class="container-fluid">
+          <h3>Изображения</h3>
+          <div class="images">
+            <div class="image image--1"><a href="#" class="image__close"></a></div>
+            <div class="image image--2"><a href="#" class="image__close"></a></div>
+            <a href="#" class="image image--empty"></a>
+          </div>
+        </div>
+      </section>
+      <section class="page__section page__section--bordered" id="section5">
+        <div class="container-fluid">
+          <div class="checkbox">
+            <input type="checkbox" id="pro">
+            <div class="checkbox__box"></div>
+            <label for="pro">
+              <div>Отвечать на объяения могут только пользователи с аккаунтом</div>
+              <div class="acount-label"></div>
+            </label>
+          </div>
+        </div>
+      </section>
+      <section class="page__section page__section--bordered" id="section6">
+        <div class="container-fluid">
+          <div class="capcha">
+            <h4>Ввведите код с изображения</h4>
+            <a href="#" class="capcha__refresh"></a>
+            <div class="capcha__body">
+              <div class="capcha__part"></div>
+              <input type="text" class="capcha__part" id="Капча" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__section" id="section7">
+        <div class="container-fluid">
           <div class="btn-wrapper">
             <button type="submit" href="#" role="button" class="btn btn--large" id="submit">Добавить объявление</button>
+            <p>Использование сайта, в том числе подача объявлений, означает согласие с правилами публикации объявлений и пользовательским соглашением.</p>
           </div>
         </div>
       </section>
     </form>
+    <footer class="page__footer">
+      <div class="container-fluid">
+        <h5>Мы в соцсетях</h5>
+        <div class="footer__image1"></div>
+        <hr />
+        <h5>Принимакем к оплате</h5>
+        <div class="footer__payments">
+          <div class="footer__image2"></div>
+          <div class="footer__image3"></div>
+          <div class="footer__image4"></div>
+          <div class="footer__image5s"></div>
+        </div>
+        <hr />
+        <p>Использование сайта, в том числе подача объявлений, означает согласие с пользовательским соглашением.</p>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

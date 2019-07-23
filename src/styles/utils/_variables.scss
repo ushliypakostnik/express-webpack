@@ -162,12 +162,4 @@ $container_lg:                 ($content-container_lg + $size);
 
 // Roundings
 
-$border-radius_base: 0;
-$border-radius_xsmall: 3px;
-$border-radius_small: 4px;
-$border-radius_large: 6px;
-
-// Buttons
-
-$btn_padding_horizontal_base: 12px;
-$btn_padding_vertical_base: 6px;
+$border-radius_base: 6px;

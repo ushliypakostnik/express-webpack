@@ -4,6 +4,7 @@ Express project on Babel with Webpack bundler
 Тестовое задание.
 
 Исходный тестовый текстовый файл: /src/text.txt
+
 "Рабочий", после запуска сервера /build/text.txt - в него пишутся изменения при работе приложения
 
 Deploy

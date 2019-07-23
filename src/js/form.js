@@ -29,7 +29,7 @@ const Form = (() => {
   const submit = document.getElementById('submit');
 
   const ready = () => {
-    // Селекты
+    // Selects
     selectsarr.forEach((element) => {
       element.addEventListener('change', () => {
         logger.info('select');
@@ -39,7 +39,7 @@ const Form = (() => {
       });
     });
 
-    // Больше
+    // More link and section
     moresarr.forEach((element) => {
       element.addEventListener('click', (e) => {
         logger.info('click');
@@ -50,7 +50,7 @@ const Form = (() => {
       });
     });
 
-    // Анимационные лейблы
+    // Animationed labels
     controlsarr.forEach((element) => {
       element.addEventListener('focus', () => {
         logger.info('focus');
@@ -65,7 +65,7 @@ const Form = (() => {
       });
     });
 
-    // Текст объявления
+    // Text of post
     const c = input.value.length;
     const v = input.nextElementSibling.children[0];
     v.innerHTML = c;
@@ -80,7 +80,7 @@ const Form = (() => {
       }
     };
 
-    // Сабмит формы
+    // Form submit
     submit.onclick = (e) => {
       logger.info('submit !!!');
       e.preventDefault();
@@ -101,7 +101,7 @@ const Form = (() => {
   const init = () => {
     logger.info('init');
 
-    // Получение данных
+    // Get data from txt file
     api.getData()
       .then((response) => {
         Object.keys(response).forEach((key) => {

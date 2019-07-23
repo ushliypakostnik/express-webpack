@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "92bec4b44cc9d576900b";
+/******/ 	var hotCurrentHash = "b7440a1db2a43c0efed6";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2772,12 +2772,13 @@ module.exports = function isBuffer (obj) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 exports.i(__webpack_require__(/*! -!../../node_modules/css-loader??ref--9-1!../../node_modules/sass-loader/lib/loader.js??ref--9-2!./normalize.css */ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/normalize.css"), "");
 
 // module
-exports.push([module.i, "@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #575757;\n  background: #fff;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #575757;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 32px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 46px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 18px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 26px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 20px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 11px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 15px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 10px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 14px; }\n\nh1:first-child, h2:first-child, h3:first-child {\n  margin-top: 0; }\n\nh1, h2, h3, h4, h5, h6 {\n  color: #575757; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n\n@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #575757;\n  background: #fff;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #575757;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 32px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 46px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 18px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 26px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 20px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 11px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 15px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 10px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 14px; }\n\nh1:first-child, h2:first-child, h3:first-child {\n  margin-top: 0; }\n\nh1, h2, h3, h4, h5, h6 {\n  color: #575757; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n", ""]);
+exports.push([module.i, ".form-control:hover,\n.form-select:hover, .search-control:hover, .form-control:active,\n.form-select:active, .search-control:active, .form-control:focus,\n.form-select:focus, .search-control:focus {\n  outline: none !important; }\n\n@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #151413;\n  background: #dadada;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\nselect {\n  background: transparent; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #151413;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 21px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 29px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 43px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 23px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 32px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 20px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 28px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 22px; }\n\nh1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  color: #151413; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n\n.btn--large {\n  border: none;\n  height: 140px;\n  color: #fff;\n  border-radius: 70px;\n  background: linear-gradient(#fa992b, #f26b2b);\n  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 900;\n  letter-spacing: normal;\n  line-height: 43px; }\n\n.form-control,\n.form-select {\n  box-sizing: border-box;\n  width: 100%;\n  border-top: none;\n  border-left: none;\n  border-right: none;\n  border-bottom: 2px solid #cfcfcf;\n  padding-bottom: 17px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-group {\n  position: relative;\n  margin-top: 42px; }\n  .form-group select {\n    position: absolute;\n    top: 5px;\n    color: transparent; }\n    .form-group select option {\n      color: #151413; }\n  .form-group .form-label-right {\n    position: absolute;\n    top: 0;\n    right: 0;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px; }\n    .form-group .form-label-right ~ .form-control {\n      padding-right: 100px; }\n  .form-group__arrow {\n    position: absolute;\n    top: 10px;\n    right: 11px;\n    background: url(" + escape(__webpack_require__(/*! ../images/arrow.jpg */ "./src/images/arrow.jpg")) + ") 50% 50% no-repeat;\n    width: 34px;\n    height: 27px; }\n\n.form-label {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 10;\n  white-space: nowrap;\n  pointer-events: none;\n  color: #bebebe;\n  transition: transform 150ms ease-out, font-size 150ms ease-out;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-label[required]::after {\n  content: \"\";\n  position: absolute;\n  top: 2px;\n  right: -26px;\n  background: url(" + escape(__webpack_require__(/*! ../images/star.jpg */ "./src/images/star.jpg")) + ") 50% 50% no-repeat;\n  width: 14px;\n  height: 14px; }\n\n.focused .form-label {\n  transform: translateY(-80%);\n  font-size: 1.2em; }\n\n.focused .form-control,\n.focused .form-select {\n  border-color: #757575; }\n\n.search-wrapper {\n  position: relative; }\n  .search-wrapper::before {\n    content: \"\";\n    position: absolute;\n    top: 28px;\n    left: 114px;\n    background: url(" + escape(__webpack_require__(/*! ../images/search.jpg */ "./src/images/search.jpg")) + ") 50% 50% no-repeat;\n    width: 33px;\n    height: 34px; }\n\n.search-control {\n  border-radius: 47px;\n  border: 2px solid #e6e6e6;\n  padding-left: 51px;\n  width: 100%;\n  height: 47px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n  .search-control::placeholder {\n    color: #cfcfcf; }\n\n.switch {\n  display: flex;\n  position: relative;\n  margin-bottom: 55px;\n  width: 100%;\n  height: 70px; }\n  .switch:before {\n    position: absolute;\n    top: 0;\n    content: \"\";\n    border-radius: 70px;\n    border: 2px solid #cfcfcf;\n    width: 100%;\n    height: 66px; }\n  .switch > div {\n    position: relative;\n    flex-grow: 1;\n    width: 50%;\n    text-align: center;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px;\n    line-height: 62px; }\n    .switch > div.switch--active {\n      color: #fff;\n      border-radius: 70px;\n      background: linear-gradient(#fa992b, #f26b2b); }\n\n.page__wrapper {\n  background: #dadada;\n  min-width: 320px;\n  max-width: 520px;\n  margin: 0 auto; }\n\n.page__header {\n  position: relative;\n  background: #fff;\n  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  width: 100%;\n  height: 90px; }\n  .page__header::before {\n    content: \"\";\n    position: absolute;\n    top: 25px;\n    left: 14px;\n    background: url(" + escape(__webpack_require__(/*! ../images/bar.jpg */ "./src/images/bar.jpg")) + ") 50% 50% no-repeat;\n    width: 49px;\n    height: 41px; }\n  .page__header::after {\n    content: \"\";\n    position: absolute;\n    top: 23px;\n    right: 17px;\n    background: url(" + escape(__webpack_require__(/*! ../images/user.jpg */ "./src/images/user.jpg")) + ") 50% 50% no-repeat;\n    width: 42px;\n    height: 44px; }\n  .page__header > div {\n    padding-left: 97px;\n    padding-right: 152px;\n    padding-top: 18px; }\n\n.page__section {\n  background: #fff;\n  box-shadow: 0 3px 0 0 #e5e5e5;\n  margin-bottom: 20px; }\n\n.section__morelink {\n  text-align: center;\n  margin-top: 27px; }\n  .section__morelink a {\n    display: inline-block;\n    position: relative;\n    padding-left: 40px;\n    transition: color 0.2s ease-out 0s;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 21px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 29px; }\n    .section__morelink a, .section__morelink a:focus {\n      color: #151413; }\n    .section__morelink a:hover, .section__morelink a:active {\n      color: #151413; }\n    @media (max-width: 991px) {\n      .section__morelink a, .section__morelink a:hover, .section__morelink a:focus {\n        color: #151413; }\n      .section__morelink a:active {\n        color: #151413; } }\n    .section__morelink a .icon-more {\n      position: absolute;\n      top: 9px;\n      left: -1px;\n      background: url(" + escape(__webpack_require__(/*! ../images/more.jpg */ "./src/images/more.jpg")) + ") 50% 50% no-repeat;\n      width: 36px;\n      height: 25px; }\n  .section__morelink.close {\n    display: none; }\n\n.section__more {\n  display: none; }\n  .section__more.open {\n    display: block; }\n\n#section1 {\n  padding-top: 32px;\n  padding-bottom: 30px; }\n  #section1 h1 {\n    margin-bottom: 85px; }\n  #section1 h3 {\n    margin-bottom: 42px; }\n\n#section2 {\n  padding-top: 100px;\n  padding-bottom: 50px; }\n  #section2 h3 {\n    margin-bottom: 44px; }\n\n#section3 {\n  padding-top: 20px;\n  padding-bottom: 50px; }\n\n.form-control:hover,\n.form-select:hover, .search-control:hover, .form-control:active,\n.form-select:active, .search-control:active, .form-control:focus,\n.form-select:focus, .search-control:focus {\n  outline: none !important; }\n\n@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #151413;\n  background: #dadada;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\nselect {\n  background: transparent; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #151413;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 21px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 29px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 43px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 23px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 32px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 20px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 28px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 22px; }\n\nh1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  color: #151413; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n\n.btn--large {\n  border: none;\n  height: 140px;\n  color: #fff;\n  border-radius: 70px;\n  background: linear-gradient(#fa992b, #f26b2b);\n  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 900;\n  letter-spacing: normal;\n  line-height: 43px; }\n\n.form-control,\n.form-select {\n  box-sizing: border-box;\n  width: 100%;\n  border-top: none;\n  border-left: none;\n  border-right: none;\n  border-bottom: 2px solid #cfcfcf;\n  padding-bottom: 17px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-group {\n  position: relative;\n  margin-top: 42px; }\n  .form-group select {\n    position: absolute;\n    top: 5px;\n    color: transparent; }\n    .form-group select option {\n      color: #151413; }\n  .form-group .form-label-right {\n    position: absolute;\n    top: 0;\n    right: 0;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px; }\n    .form-group .form-label-right ~ .form-control {\n      padding-right: 100px; }\n  .form-group__arrow {\n    position: absolute;\n    top: 10px;\n    right: 11px;\n    background: url(" + escape(__webpack_require__(/*! ../images/arrow.jpg */ "./src/images/arrow.jpg")) + ") 50% 50% no-repeat;\n    width: 34px;\n    height: 27px; }\n\n.form-label {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 10;\n  white-space: nowrap;\n  pointer-events: none;\n  color: #bebebe;\n  transition: transform 150ms ease-out, font-size 150ms ease-out;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-label[required]::after {\n  content: \"\";\n  position: absolute;\n  top: 2px;\n  right: -26px;\n  background: url(" + escape(__webpack_require__(/*! ../images/star.jpg */ "./src/images/star.jpg")) + ") 50% 50% no-repeat;\n  width: 14px;\n  height: 14px; }\n\n.focused .form-label {\n  transform: translateY(-80%);\n  font-size: 1.2em; }\n\n.focused .form-control,\n.focused .form-select {\n  border-color: #757575; }\n\n.search-wrapper {\n  position: relative; }\n  .search-wrapper::before {\n    content: \"\";\n    position: absolute;\n    top: 28px;\n    left: 114px;\n    background: url(" + escape(__webpack_require__(/*! ../images/search.jpg */ "./src/images/search.jpg")) + ") 50% 50% no-repeat;\n    width: 33px;\n    height: 34px; }\n\n.search-control {\n  border-radius: 47px;\n  border: 2px solid #e6e6e6;\n  padding-left: 51px;\n  width: 100%;\n  height: 47px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n  .search-control::placeholder {\n    color: #cfcfcf; }\n\n.switch {\n  display: flex;\n  position: relative;\n  margin-bottom: 55px;\n  width: 100%;\n  height: 70px; }\n  .switch:before {\n    position: absolute;\n    top: 0;\n    content: \"\";\n    border-radius: 70px;\n    border: 2px solid #cfcfcf;\n    width: 100%;\n    height: 66px; }\n  .switch > div {\n    position: relative;\n    flex-grow: 1;\n    width: 50%;\n    text-align: center;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px;\n    line-height: 62px; }\n    .switch > div.switch--active {\n      color: #fff;\n      border-radius: 70px;\n      background: linear-gradient(#fa992b, #f26b2b); }\n\n.page__wrapper {\n  background: #dadada;\n  min-width: 320px;\n  max-width: 520px;\n  margin: 0 auto; }\n\n.page__header {\n  position: relative;\n  background: #fff;\n  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  width: 100%;\n  height: 90px; }\n  .page__header::before {\n    content: \"\";\n    position: absolute;\n    top: 25px;\n    left: 14px;\n    background: url(" + escape(__webpack_require__(/*! ../images/bar.jpg */ "./src/images/bar.jpg")) + ") 50% 50% no-repeat;\n    width: 49px;\n    height: 41px; }\n  .page__header::after {\n    content: \"\";\n    position: absolute;\n    top: 23px;\n    right: 17px;\n    background: url(" + escape(__webpack_require__(/*! ../images/user.jpg */ "./src/images/user.jpg")) + ") 50% 50% no-repeat;\n    width: 42px;\n    height: 44px; }\n  .page__header > div {\n    padding-left: 97px;\n    padding-right: 152px;\n    padding-top: 18px; }\n\n.page__section {\n  background: #fff;\n  box-shadow: 0 3px 0 0 #e5e5e5;\n  margin-bottom: 20px; }\n\n.section__morelink {\n  text-align: center;\n  margin-top: 27px; }\n  .section__morelink a {\n    display: inline-block;\n    position: relative;\n    padding-left: 40px;\n    transition: color 0.2s ease-out 0s;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 21px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 29px; }\n    .section__morelink a, .section__morelink a:focus {\n      color: #151413; }\n    .section__morelink a:hover, .section__morelink a:active {\n      color: #151413; }\n    @media (max-width: 991px) {\n      .section__morelink a, .section__morelink a:hover, .section__morelink a:focus {\n        color: #151413; }\n      .section__morelink a:active {\n        color: #151413; } }\n    .section__morelink a .icon-more {\n      position: absolute;\n      top: 9px;\n      left: -1px;\n      background: url(" + escape(__webpack_require__(/*! ../images/more.jpg */ "./src/images/more.jpg")) + ") 50% 50% no-repeat;\n      width: 36px;\n      height: 25px; }\n  .section__morelink.close {\n    display: none; }\n\n.section__more {\n  display: none; }\n  .section__more.open {\n    display: block; }\n\n#section1 {\n  padding-top: 32px;\n  padding-bottom: 30px; }\n  #section1 h1 {\n    margin-bottom: 85px; }\n  #section1 h3 {\n    margin-bottom: 42px; }\n\n#section2 {\n  padding-top: 100px;\n  padding-bottom: 50px; }\n  #section2 h3 {\n    margin-bottom: 44px; }\n\n#section3 {\n  padding-top: 20px;\n  padding-bottom: 50px; }\n", ""]);
 
 // exports
 
@@ -2791,12 +2792,13 @@ exports.push([module.i, "@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
 exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
 // imports
 exports.i(__webpack_require__(/*! -!../../node_modules/css-loader??ref--9-1!../../node_modules/sass-loader/lib/loader.js??ref--9-2!./normalize.css */ "./node_modules/css-loader/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/normalize.css"), "");
 
 // module
-exports.push([module.i, "@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #575757;\n  background: #fff;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #575757;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 32px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 46px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 18px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 26px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 20px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 13px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 18px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 11px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 15px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 10px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 14px; }\n\nh1:first-child, h2:first-child, h3:first-child {\n  margin-top: 0; }\n\nh1, h2, h3, h4, h5, h6 {\n  color: #575757; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n\n/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n  /* stylelint-disable font-weight-notation */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  overflow: visible;\n  /* 1 */ }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  text-transform: none;\n  /* 1 */ }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n", ""]);
+exports.push([module.i, ".form-control:hover,\n.form-select:hover, .search-control:hover, .form-control:active,\n.form-select:active, .search-control:active, .form-control:focus,\n.form-select:focus, .search-control:focus {\n  outline: none !important; }\n\n@keyframes fadeOn {\n  from {\n    opacity: 0; }\n  to {\n    opacity: 1; } }\n\n@keyframes fadeOut {\n  from {\n    opacity: 1; }\n  to {\n    opacity: 0; } }\n\nhtml {\n  -webkit-text-size-adjust: none;\n  height: 100%; }\n\nbody {\n  height: 100%;\n  color: #151413;\n  background: #dadada;\n  padding: 0;\n  quotes: \"\\AB\" \"\\BB\";\n  overflow-x: hidden;\n  backface-visibility: hidden; }\n\na {\n  color: #557aa7;\n  text-decoration: none; }\n  a:hover {\n    color: #44529c; }\n\nbutton,\na {\n  outline: none !important; }\n  button:hover, button:active, button:focus,\n  a:hover,\n  a:active,\n  a:focus {\n    outline: none !important; }\n\nselect {\n  background: transparent; }\n\niframe {\n  border-width: 0; }\n\nbody {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 14px; }\n\na {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-weight: 400; }\n\np {\n  color: #151413;\n  margin-bottom: 20px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 21px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 29px; }\n\nh1 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh2 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 48px;\n  font-weight: 300;\n  letter-spacing: normal;\n  line-height: 69px; }\n\nh3 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 700;\n  letter-spacing: normal;\n  line-height: 43px; }\n\nh4 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 23px;\n  font-weight: 600;\n  letter-spacing: normal;\n  line-height: 32px; }\n\nh5 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 20px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 28px; }\n\nh6 {\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 22px; }\n\nh1, h2, h3, h4, h5, h6 {\n  margin-top: 0;\n  color: #151413; }\n\nstrong {\n  font-weight: 700; }\n\n.container-fluid {\n  padding-left: 20px;\n  padding-right: 20px; }\n  @media (max-width: 767px) {\n    .container-fluid {\n      padding-left: 10px;\n      padding-right: 10px; } }\n\n.btn--large {\n  border: none;\n  height: 140px;\n  color: #fff;\n  border-radius: 70px;\n  background: linear-gradient(#fa992b, #f26b2b);\n  box-shadow: inset 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 30px;\n  font-weight: 900;\n  letter-spacing: normal;\n  line-height: 43px; }\n\n.form-control,\n.form-select {\n  box-sizing: border-box;\n  width: 100%;\n  border-top: none;\n  border-left: none;\n  border-right: none;\n  border-bottom: 2px solid #cfcfcf;\n  padding-bottom: 17px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-group {\n  position: relative;\n  margin-top: 42px; }\n  .form-group select {\n    position: absolute;\n    top: 5px;\n    color: transparent; }\n    .form-group select option {\n      color: #151413; }\n  .form-group .form-label-right {\n    position: absolute;\n    top: 0;\n    right: 0;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px; }\n    .form-group .form-label-right ~ .form-control {\n      padding-right: 100px; }\n  .form-group__arrow {\n    position: absolute;\n    top: 10px;\n    right: 11px;\n    background: url(" + escape(__webpack_require__(/*! ../images/arrow.jpg */ "./src/images/arrow.jpg")) + ") 50% 50% no-repeat;\n    width: 34px;\n    height: 27px; }\n\n.form-label {\n  position: absolute;\n  left: 0;\n  top: 0;\n  z-index: 10;\n  white-space: nowrap;\n  pointer-events: none;\n  color: #bebebe;\n  transition: transform 150ms ease-out, font-size 150ms ease-out;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n\n.form-label[required]::after {\n  content: \"\";\n  position: absolute;\n  top: 2px;\n  right: -26px;\n  background: url(" + escape(__webpack_require__(/*! ../images/star.jpg */ "./src/images/star.jpg")) + ") 50% 50% no-repeat;\n  width: 14px;\n  height: 14px; }\n\n.focused .form-label {\n  transform: translateY(-80%);\n  font-size: 1.2em; }\n\n.focused .form-control,\n.focused .form-select {\n  border-color: #757575; }\n\n.search-wrapper {\n  position: relative; }\n  .search-wrapper::before {\n    content: \"\";\n    position: absolute;\n    top: 28px;\n    left: 114px;\n    background: url(" + escape(__webpack_require__(/*! ../images/search.jpg */ "./src/images/search.jpg")) + ") 50% 50% no-repeat;\n    width: 33px;\n    height: 34px; }\n\n.search-control {\n  border-radius: 47px;\n  border: 2px solid #e6e6e6;\n  padding-left: 51px;\n  width: 100%;\n  height: 47px;\n  font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n  font-size: 26px;\n  font-weight: 400;\n  letter-spacing: normal;\n  line-height: 36px; }\n  .search-control::placeholder {\n    color: #cfcfcf; }\n\n.switch {\n  display: flex;\n  position: relative;\n  margin-bottom: 55px;\n  width: 100%;\n  height: 70px; }\n  .switch:before {\n    position: absolute;\n    top: 0;\n    content: \"\";\n    border-radius: 70px;\n    border: 2px solid #cfcfcf;\n    width: 100%;\n    height: 66px; }\n  .switch > div {\n    position: relative;\n    flex-grow: 1;\n    width: 50%;\n    text-align: center;\n    color: #bebebe;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 26px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 36px;\n    line-height: 62px; }\n    .switch > div.switch--active {\n      color: #fff;\n      border-radius: 70px;\n      background: linear-gradient(#fa992b, #f26b2b); }\n\n.page__wrapper {\n  background: #dadada;\n  min-width: 320px;\n  max-width: 520px;\n  margin: 0 auto; }\n\n.page__header {\n  position: relative;\n  background: #fff;\n  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.15);\n  width: 100%;\n  height: 90px; }\n  .page__header::before {\n    content: \"\";\n    position: absolute;\n    top: 25px;\n    left: 14px;\n    background: url(" + escape(__webpack_require__(/*! ../images/bar.jpg */ "./src/images/bar.jpg")) + ") 50% 50% no-repeat;\n    width: 49px;\n    height: 41px; }\n  .page__header::after {\n    content: \"\";\n    position: absolute;\n    top: 23px;\n    right: 17px;\n    background: url(" + escape(__webpack_require__(/*! ../images/user.jpg */ "./src/images/user.jpg")) + ") 50% 50% no-repeat;\n    width: 42px;\n    height: 44px; }\n  .page__header > div {\n    padding-left: 97px;\n    padding-right: 152px;\n    padding-top: 18px; }\n\n.page__section {\n  background: #fff;\n  box-shadow: 0 3px 0 0 #e5e5e5;\n  margin-bottom: 20px; }\n\n.section__morelink {\n  text-align: center;\n  margin-top: 27px; }\n  .section__morelink a {\n    display: inline-block;\n    position: relative;\n    padding-left: 40px;\n    transition: color 0.2s ease-out 0s;\n    font-family: \"Open Sans\", Helvetica, Arial, sans-serif;\n    font-size: 21px;\n    font-weight: 400;\n    letter-spacing: normal;\n    line-height: 29px; }\n    .section__morelink a, .section__morelink a:focus {\n      color: #151413; }\n    .section__morelink a:hover, .section__morelink a:active {\n      color: #151413; }\n    @media (max-width: 991px) {\n      .section__morelink a, .section__morelink a:hover, .section__morelink a:focus {\n        color: #151413; }\n      .section__morelink a:active {\n        color: #151413; } }\n    .section__morelink a .icon-more {\n      position: absolute;\n      top: 9px;\n      left: -1px;\n      background: url(" + escape(__webpack_require__(/*! ../images/more.jpg */ "./src/images/more.jpg")) + ") 50% 50% no-repeat;\n      width: 36px;\n      height: 25px; }\n  .section__morelink.close {\n    display: none; }\n\n.section__more {\n  display: none; }\n  .section__more.open {\n    display: block; }\n\n#section1 {\n  padding-top: 32px;\n  padding-bottom: 30px; }\n  #section1 h1 {\n    margin-bottom: 85px; }\n  #section1 h3 {\n    margin-bottom: 42px; }\n\n#section2 {\n  padding-top: 100px;\n  padding-bottom: 50px; }\n  #section2 h3 {\n    margin-bottom: 44px; }\n\n#section3 {\n  padding-top: 20px;\n  padding-bottom: 50px; }\n\n/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */\n/* Document\n   ========================================================================== */\n/**\n * 1. Correct the line height in all browsers.\n * 2. Prevent adjustments of font size after orientation changes in iOS.\n */\nhtml {\n  line-height: 1.15;\n  /* 1 */\n  -webkit-text-size-adjust: 100%;\n  /* 2 */ }\n\n/* Sections\n   ========================================================================== */\n/**\n * Remove the margin in all browsers.\n */\nbody {\n  margin: 0; }\n\n/**\n * Render the `main` element consistently in IE.\n */\nmain {\n  display: block; }\n\n/**\n * Correct the font size and margin on `h1` elements within `section` and\n * `article` contexts in Chrome, Firefox, and Safari.\n */\nh1 {\n  font-size: 2em;\n  margin: 0.67em 0; }\n\n/* Grouping content\n   ========================================================================== */\n/**\n * 1. Add the correct box sizing in Firefox.\n * 2. Show the overflow in Edge and IE.\n */\nhr {\n  box-sizing: content-box;\n  /* 1 */\n  height: 0;\n  /* 1 */\n  overflow: visible;\n  /* 2 */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\npre {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/* Text-level semantics\n   ========================================================================== */\n/**\n * Remove the gray background on active links in IE 10.\n */\na {\n  background-color: transparent; }\n\n/**\n * 1. Remove the bottom border in Chrome 57-\n * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.\n */\nabbr[title] {\n  border-bottom: none;\n  /* 1 */\n  text-decoration: underline dotted;\n  /* 2 */ }\n\n/**\n * Add the correct font weight in Chrome, Edge, and Safari.\n */\nb,\nstrong {\n  font-weight: bolder;\n  /* stylelint-disable font-weight-notation */ }\n\n/**\n * 1. Correct the inheritance and scaling of font size in all browsers.\n * 2. Correct the odd `em` font sizing in all browsers.\n */\ncode,\nkbd,\nsamp {\n  font-family: monospace, monospace;\n  /* 1 */\n  font-size: 1em;\n  /* 2 */ }\n\n/**\n * Add the correct font size in all browsers.\n */\nsmall {\n  font-size: 80%; }\n\n/**\n * Prevent `sub` and `sup` elements from affecting the line height in\n * all browsers.\n */\nsub,\nsup {\n  font-size: 75%;\n  line-height: 0;\n  position: relative;\n  vertical-align: baseline; }\n\nsub {\n  bottom: -0.25em; }\n\nsup {\n  top: -0.5em; }\n\n/* Embedded content\n   ========================================================================== */\n/**\n * Remove the border on images inside links in IE 10.\n */\nimg {\n  border-style: none; }\n\n/* Forms\n   ========================================================================== */\n/**\n * 1. Change the font styles in all browsers.\n * 2. Remove the margin in Firefox and Safari.\n */\nbutton,\ninput,\noptgroup,\nselect,\ntextarea {\n  font-family: inherit;\n  /* 1 */\n  font-size: 100%;\n  /* 1 */\n  line-height: 1.15;\n  /* 1 */\n  margin: 0;\n  /* 2 */ }\n\n/**\n * Show the overflow in IE.\n * 1. Show the overflow in Edge.\n */\nbutton,\ninput {\n  overflow: visible;\n  /* 1 */ }\n\n/**\n * Remove the inheritance of text transform in Edge, Firefox, and IE.\n * 1. Remove the inheritance of text transform in Firefox.\n */\nbutton,\nselect {\n  text-transform: none;\n  /* 1 */ }\n\n/**\n * Correct the inability to style clickable types in iOS and Safari.\n */\nbutton,\n[type=\"button\"],\n[type=\"reset\"],\n[type=\"submit\"] {\n  -webkit-appearance: button; }\n\n/**\n * Remove the inner border and padding in Firefox.\n */\nbutton::-moz-focus-inner,\n[type=\"button\"]::-moz-focus-inner,\n[type=\"reset\"]::-moz-focus-inner,\n[type=\"submit\"]::-moz-focus-inner {\n  border-style: none;\n  padding: 0; }\n\n/**\n * Restore the focus styles unset by the previous rule.\n */\nbutton:-moz-focusring,\n[type=\"button\"]:-moz-focusring,\n[type=\"reset\"]:-moz-focusring,\n[type=\"submit\"]:-moz-focusring {\n  outline: 1px dotted ButtonText; }\n\n/**\n * Correct the padding in Firefox.\n */\nfieldset {\n  padding: 0.35em 0.75em 0.625em; }\n\n/**\n * 1. Correct the text wrapping in Edge and IE.\n * 2. Correct the color inheritance from `fieldset` elements in IE.\n * 3. Remove the padding so developers are not caught out when they zero out\n *    `fieldset` elements in all browsers.\n */\nlegend {\n  box-sizing: border-box;\n  /* 1 */\n  color: inherit;\n  /* 2 */\n  display: table;\n  /* 1 */\n  max-width: 100%;\n  /* 1 */\n  padding: 0;\n  /* 3 */\n  white-space: normal;\n  /* 1 */ }\n\n/**\n * Add the correct vertical alignment in Chrome, Firefox, and Opera.\n */\nprogress {\n  vertical-align: baseline; }\n\n/**\n * Remove the default vertical scrollbar in IE 10+.\n */\ntextarea {\n  overflow: auto; }\n\n/**\n * 1. Add the correct box sizing in IE 10.\n * 2. Remove the padding in IE 10.\n */\n[type=\"checkbox\"],\n[type=\"radio\"] {\n  box-sizing: border-box;\n  /* 1 */\n  padding: 0;\n  /* 2 */ }\n\n/**\n * Correct the cursor style of increment and decrement buttons in Chrome.\n */\n[type=\"number\"]::-webkit-inner-spin-button,\n[type=\"number\"]::-webkit-outer-spin-button {\n  height: auto; }\n\n/**\n * 1. Correct the odd appearance in Chrome and Safari.\n * 2. Correct the outline style in Safari.\n */\n[type=\"search\"] {\n  -webkit-appearance: textfield;\n  /* 1 */\n  outline-offset: -2px;\n  /* 2 */ }\n\n/**\n * Remove the inner padding in Chrome and Safari on macOS.\n */\n[type=\"search\"]::-webkit-search-decoration {\n  -webkit-appearance: none; }\n\n/**\n * 1. Correct the inability to style clickable types in iOS and Safari.\n * 2. Change font properties to `inherit` in Safari.\n */\n::-webkit-file-upload-button {\n  -webkit-appearance: button;\n  /* 1 */\n  font: inherit;\n  /* 2 */ }\n\n/* Interactive\n   ========================================================================== */\n/*\n * Add the correct display in Edge, IE 10+, and Firefox.\n */\ndetails {\n  display: block; }\n\n/*\n * Add the correct display in all browsers.\n */\nsummary {\n  display: list-item; }\n\n/* Misc\n   ========================================================================== */\n/**\n * Add the correct display in IE 10+.\n */\ntemplate {\n  display: none; }\n\n/**\n * Add the correct display in IE 10.\n */\n[hidden] {\n  display: none; }\n", ""]);
 
 // exports
 
@@ -2885,6 +2887,33 @@ function toComment(sourceMap) {
 	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
 	return '/*# ' + data + ' */';
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/url/escape.js":
+/*!***************************************************!*\
+  !*** ./node_modules/css-loader/lib/url/escape.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = function escape(url) {
+    if (typeof url !== 'string') {
+        return url
+    }
+    // If url is already wrapped in quotes, remove them
+    if (/^['"].*['"]$/.test(url)) {
+        url = url.slice(1, -1);
+    }
+    // Should url be wrapped?
+    // See https://drafts.csswg.org/css-values-3/#urls
+    if (/["'() \t\n]/.test(url)) {
+        return '"' + url.replace(/"/g, '\\"').replace(/\n/g, '\\n') + '"'
+    }
+
+    return url
 }
 
 
@@ -5439,20 +5468,15 @@ __webpack_require__(/*! dotenv */ "./node_modules/dotenv/lib/main.js").config();
 var env = "development";
 var common = {
   PORT: process.env.PORT || 8080,
-  API_URL: process.env.MEDIA_URL || 'http://127.0.0.1:8080'
-};
-
-var development = _objectSpread({}, common, {
   DIST_DIR: __dirname,
+  API_URL: 'http://127.0.0.1:8080',
   STATIC_SERVE: true,
   CORS_ENABLED: true
-});
+};
 
-var production = _objectSpread({}, common, {
-  DIST_DIR: process.env.DIST_DIR || __dirname,
-  STATIC_SERVE: process.env.STATIC_SERVE || true,
-  CORS_ENABLED: true
-});
+var development = _objectSpread({}, common);
+
+var production = _objectSpread({}, common);
 
 var config = {
   development: development,
@@ -5460,6 +5484,28 @@ var config = {
 };
 /* harmony default export */ __webpack_exports__["default"] = (config[env]);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../node_modules/process/browser.js */ "./node_modules/process/browser.js"), "/"))
+
+/***/ }),
+
+/***/ "./src/images/arrow.jpg":
+/*!******************************!*\
+  !*** ./src/images/arrow.jpg ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/arrow.jpg";
+
+/***/ }),
+
+/***/ "./src/images/bar.jpg":
+/*!****************************!*\
+  !*** ./src/images/bar.jpg ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/bar.jpg";
 
 /***/ }),
 
@@ -5471,6 +5517,50 @@ var config = {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/favicon.jpg";
+
+/***/ }),
+
+/***/ "./src/images/more.jpg":
+/*!*****************************!*\
+  !*** ./src/images/more.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/more.jpg";
+
+/***/ }),
+
+/***/ "./src/images/search.jpg":
+/*!*******************************!*\
+  !*** ./src/images/search.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/search.jpg";
+
+/***/ }),
+
+/***/ "./src/images/star.jpg":
+/*!*****************************!*\
+  !*** ./src/images/star.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/star.jpg";
+
+/***/ }),
+
+/***/ "./src/images/user.jpg":
+/*!*****************************!*\
+  !*** ./src/images/user.jpg ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/user.jpg";
 
 /***/ }),
 
@@ -5526,8 +5616,21 @@ var logger = new _logger__WEBPACK_IMPORTED_MODULE_2__["default"](path__WEBPACK_I
 var Form = function () {
   var NAME = 'Form'; // eslint-disable-line no-unused-vars
 
-  var submit = document.getElementById('submit');
   var fields = {};
+  var controls = document.getElementsByClassName('form-control');
+  var controlsarr = Object.keys(controls).map(function (k) {
+    return controls[k];
+  });
+  var selects = document.getElementsByClassName('form-select');
+  var selectsarr = Object.keys(selects).map(function (k) {
+    return selects[k];
+  });
+  var mores = document.getElementsByClassName('morelink');
+  var moresarr = Object.keys(mores).map(function (k) {
+    return mores[k];
+  });
+  console.log(moresarr);
+  var submit = document.getElementById('submit');
 
   var getData = function getData() {
     logger.info('request data');
@@ -5567,27 +5670,74 @@ var Form = function () {
   };
 
   var init = function init() {
-    logger.info('init');
+    logger.info('init'); // Получение данных
+
     getData().then(function (response) {
       Object.keys(response).forEach(function (key) {
         fields[key] = document.getElementById(key);
-        fields[key].value = response[key];
+
+        if (fields[key]) {
+          if (response[key]) {
+            fields[key].value = response[key];
+            fields[key].closest('.form-group').classList.add('focused');
+          }
+        }
       });
-    });
+    }); // Сабмит формы
 
     submit.onclick = function (e) {
-      e.preventDefault();
       logger.info('submit !!!');
+      e.preventDefault();
       var data = {};
       Object.keys(fields).forEach(function (key) {
-        var _fields$key = fields[key],
-            id = _fields$key.id,
-            value = _fields$key.value;
-        data[id] = value;
+        if (fields[key]) {
+          var _fields$key = fields[key],
+              id = _fields$key.id,
+              value = _fields$key.value;
+          data[id] = value;
+        }
       });
       postData(data);
       postJSON(data);
-    };
+    }; // Селекты
+
+
+    selectsarr.forEach(function (element) {
+      element.addEventListener('change', function () {
+        logger.info('select');
+        var value = element.options[element.selectedIndex].text;
+        fields[element.getAttribute('for')].value = value;
+        element.closest('.form-group').classList.add('focused');
+      });
+    }); // Больше
+
+    moresarr.forEach(function (element) {
+      console.log(element);
+      element.addEventListener('click', function (e) {
+        logger.info('click');
+        e.preventDefault();
+        var block = document.getElementById(element.getAttribute('for'));
+        block.classList.add('open');
+        element.closest('.section__morelink').classList.add('close');
+      });
+    }); // Анимационные лейблы
+
+    controlsarr.forEach(function (element) {
+      element.addEventListener('focus', function () {
+        logger.info('focus');
+        element.closest('.form-group').classList.add('focused');
+      });
+      element.addEventListener('blur', function () {
+        logger.info('blur');
+
+        if (element.value === '') {
+          element.classList.remove('filled');
+          element.closest('.form-group').classList.remove('focused');
+        } else {
+          element.classList.add('filled');
+        }
+      });
+    });
   };
 
   return {

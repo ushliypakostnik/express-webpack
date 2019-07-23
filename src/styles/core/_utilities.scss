@@ -1,12 +1,6 @@
 // Utilities
 //////////////////////////////////////////////////////
 
-// Animation class example
-//.pulse {
-//    $duration: $transition_duration * 2;
-//    @include animation('pulse #{$transition_duration} infinite', 'fadeOn #{$duration} forwards');
-//}
-
 // Rubber Container
 .container-fluid {
   padding-left: $size;
@@ -15,5 +9,25 @@
   @include xs {
     padding-left: $size / 2;
     padding-right: $size / 2;
+  }
+}
+
+.btn-wrapper {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.btn {
+  &--large {
+    cursor: pointer;
+    border: none;
+    height: 120px;
+    color: $color_white;
+    border-radius: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: linear-gradient($color_orange_light, $color_orange);
+    @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
   }
 }

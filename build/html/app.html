@@ -25,26 +25,149 @@
     }
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,600,700,900&amp;subset=cyrillic" rel="stylesheet">
 
   <link href="./images/favicon.jpg" rel="icon" type="image/jpg" />
 </head>
 <body>
-  <section>
-    <div class="container">
-      <h1>Новое объявление</h1>
-      <form class="form">
-        <h3>Личные данные</h3>
-            <input type="text" class="form-control" id="name" />
-            <input type="text" class="form-control" id="email" />
-            <input type="text" class="form-control" id="phone" />
-            <h3>Объявление</h3>
-            <input type="text" class="form-control" id="theme" />
-            <input type="text" class="form-control" id="product" />
-            <button type="submit" href="#" role="button" class="btn" id="submit">Добавить объявление</button>
-          </div>
-        </form>
+  <div class="page__wrapper">
+    <div class="page__header">
+      <div class="search-wrapper">
+        <input type="text" class="search-control" placeholder="Поиск" />
+      </div>
     </div>
-  </section>
+    <form class="form">
+      <section class="page__section" id="section1">
+        <div class="container-fluid">
+          <h1>Новое объявление</h1>
+          <h3>Личные данные</h3>
+          <div class="form-group">
+            <label class="form-label" for="Ваше имя">Ваше имя</label>
+            <input type="text" class="form-control" id="Ваше имя" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Email">Email</label>
+            <input type="text" class="form-control" id="Email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Телефон">Телефон</label>
+            <input type="text" class="form-control" id="Телефон" />
+          </div>
+        </div>
+      </section>
+      <section class="page__section" id="section2">
+        <div class="container-fluid">
+          <h3>Объявление</h3>
+          <div class="switch">
+            <div class="switch--active">Предложение</div>
+            <div>Спрос</div>
+          </div>
+          <div class="form-group">
+            <span class="form-group__arrow"></span>
+            <label class="form-label" for="Рубрика">Рубрика</label>
+            <input type="text" class="form-control" id="Рубрика" />
+            <select class="form-select" for="Рубрика">
+              <option selected="selected" value="">1</option>
+              <option value="1">2</option>
+              <option value="3">3</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-group__arrow"></span>
+            <label class="form-label" for="Товар">Товар</label>
+            <input type="text" class="form-control" id="Товар" />
+            <select class="form-select" for="Товар">
+              <option selected="selected" value="">1</option>
+              <option value="1">2</option>
+              <option value="3">3</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-group__arrow"></span>
+            <label class="form-label" for="Поставка" required>Поставка</label>
+            <input type="text" class="form-control" id="Поставка" required />
+            <select class="form-select" for="Поставка">
+              <option selected="selected" value="">1</option>
+              <option value="1">2</option>
+              <option value="3">3</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-group__arrow"></span>
+            <label class="form-label" for="Тип" required>Тип</label>
+            <input type="text" class="form-control" id="Тип" required />
+            <select class="form-select" for="Тип">
+              <option selected="selected" value="">1</option>
+              <option value="1">2</option>
+              <option value="3">3</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <span class="form-group__arrow"></span>
+            <label class="form-label" for="Класс" required>Класс</label>
+            <input type="text" class="form-control" id="Класс" required />
+            <select class="form-select" for="Класс">
+              <option selected="selected" value="">1</option>
+              <option value="1">2</option>
+              <option value="3">3</option>
+              <option value="4">5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Дата урожая">Дата урожая</label>
+            <input type="text" class="form-control" id="Дата урожая" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Влажность">Влажность</label>
+            <span class="form-label-right">от 1 до 100</span>
+            <input type="text" class="form-control" id="Влажность" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Сорная примесь">Сорная примесь</label>
+            <span class="form-label-right">от 1 до 100</span>
+            <input type="text" class="form-control" id="Сорная примесь" />
+          </div>
+          <div class="section__morelink">
+              <a href="#" class="morelink" for="more1"><span class="icon-more"></span>Еще</a>
+          </div>
+          <div class="section__more" id="more1">
+            <div class="form-group">
+              <label class="form-label" for="Поле1">Поле1</label>
+              <input type="text" class="form-control" id="Поле1" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="Поле2">Поле2</label>
+              <input type="text" class="form-control" id="Поле2" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="Поле3">Поле3</label>
+              <input type="text" class="form-control" id="Поле3" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="page__section" id="section3">
+        <div class="container-fluid">
+          <div class="form-group">
+            <label class="form-label" for="Название объявления">Название объявления</label>
+            <input type="text" class="form-control" id="Название объявления" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Город">Город</label>
+            <input type="text" class="form-control" id="Город" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="Текст объявления">Текст объявления</label>
+            <input type="text" class="form-control" id="Текст объявления" />
+          </div>
+          <button type="submit" href="#" role="button" class="btn btn--large" id="submit">Добавить объявление</button>
+        </div>
+      </section>
+    </form>
+  </div>
 <script type="text/javascript" src="/js/app.js"></script></body>
 </html>

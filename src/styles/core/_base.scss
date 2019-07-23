@@ -11,7 +11,7 @@ html {
 body {
   height: 100%;
   color: $color_text;
-  background: $color_white;
+  background: $color_background;
   padding: 0;
   quotes: "\00ab" "\00bb";
 
@@ -40,6 +40,10 @@ a { // stylelint-disable-line no-descending-specificity
   &:focus {
     outline: none !important; // stylelint-disable-line declaration-no-important
   }
+}
+
+select {
+  background: transparent;
 }
 
 iframe {

@@ -10,8 +10,20 @@ const logger = new Logger(path.basename(__filename, '.js'));
 const Form = (() => {
   const NAME = 'Form'; // eslint-disable-line no-unused-vars
 
-  const submit = document.getElementById('submit');
   const fields = {};
+
+  const controls = document.getElementsByClassName('form-control');
+  const controlsarr = Object.keys(controls).map(k => controls[k]);
+
+  const selects = document.getElementsByClassName('form-select');
+  const selectsarr = Object.keys(selects).map(k => selects[k]);
+
+  const mores = document.getElementsByClassName('morelink');
+  const moresarr = Object.keys(mores).map(k => mores[k]);
+
+  console.log(moresarr);
+
+  const submit = document.getElementById('submit');
 
   const getData = () => {
     logger.info('request data');
@@ -55,27 +67,76 @@ const Form = (() => {
   const init = () => {
     logger.info('init');
 
+    // Получение данных
     getData()
       .then((response) => {
         Object.keys(response).forEach((key) => {
           fields[key] = document.getElementById(key);
-          fields[key].value = response[key];
+          if (fields[key]) {
+            if (response[key]) {
+              fields[key].value = response[key];
+              fields[key].closest('.form-group').classList.add('focused');
+            }
+          }
         });
       });
 
+    // Сабмит формы
     submit.onclick = (e) => {
-      e.preventDefault();
       logger.info('submit !!!');
+      e.preventDefault();
 
       const data = {};
       Object.keys(fields).forEach((key) => {
-        const { id, value } = fields[key];
-        data[id] = value;
+        if (fields[key]) {
+          const { id, value } = fields[key];
+          data[id] = value;
+        }
       });
 
       postData(data);
       postJSON(data);
     };
+
+    // Селекты
+    selectsarr.forEach((element) => {
+      element.addEventListener('change', () => {
+        logger.info('select');
+        const value = element.options[element.selectedIndex].text;
+        fields[element.getAttribute('for')].value = value;
+        element.closest('.form-group').classList.add('focused');
+      });
+    });
+
+    // Больше
+    moresarr.forEach((element) => {
+      console.log(element);
+      element.addEventListener('click', (e) => {
+        logger.info('click');
+        e.preventDefault();
+        const block = document.getElementById(element.getAttribute('for'));
+        block.classList.add('open');
+        element.closest('.section__morelink').classList.add('close');
+      });
+    });
+
+    // Анимационные лейблы
+    controlsarr.forEach((element) => {
+      element.addEventListener('focus', () => {
+        logger.info('focus');
+        element.closest('.form-group').classList.add('focused');
+      });
+
+      element.addEventListener('blur', () => {
+        logger.info('blur');
+        if (element.value === '') {
+          element.classList.remove('filled');
+          element.closest('.form-group').classList.remove('focused');
+        } else {
+          element.classList.add('filled');
+        }
+      });
+    });
   };
 
   return {

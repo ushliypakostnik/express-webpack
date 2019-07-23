@@ -12,10 +12,10 @@ $normal-letter-spacing: normal;
 // Guide
 
 $font-size_base: 16px;
-$font-size_coefficient_large: 2;
-$font-size_coefficient_normal: 1.15;
-$font-size_coefficient_small: 0.9;
-$font-size_coefficient_xsmall: 0.8;
+$font-size_coefficient_large: 3;
+$font-size_coefficient_normal: 1.9;
+$font-size_coefficient_small: 1.6;
+$font-size_coefficient_xsmall: 1.3;
 
 $font-size_large: round($font-size_base * $font-size_coefficient_large); // 24px
 $font-size_normal: round($font-size_base * $font-size_coefficient_normal); // 18px
@@ -33,6 +33,7 @@ $font-weight_sans_light: 300;
 $font-weight_sans_regular: 400;
 $font-weight_sans_semibold: 600;
 $font-weight_sans_bold: 700;
+$font-weight_sans_extrabold: 900;
 
 // Universal Typographic Mixin
 //////////////////////////////////////////////////////
@@ -82,15 +83,15 @@ p {
 // Заголовки по умолчанию
 
 h1 {
-  @include text($font-family_sans, $font-size_large, $font-weight_sans_light);
+  @include text($font-family_sans, $font-size_large, $font-weight_sans_bold);
 }
 
 h2 {
-  @include text($font-family_sans, $font-size_normal, $font-weight_sans_light);
+  @include text($font-family_sans, $font-size_large, $font-weight_sans_light);
 }
 
 h3 {
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_semibold);
+  @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
 }
 
 h4 {
@@ -106,14 +107,8 @@ h6 {
 }
 
 // stylelint-disable-next-line selector-list-comma-newline-after, no-descending-specificity
-h1, h2, h3 {
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
-// stylelint-disable-next-line selector-list-comma-newline-after, no-descending-specificity
 h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
   color: $color_text;
 }
 

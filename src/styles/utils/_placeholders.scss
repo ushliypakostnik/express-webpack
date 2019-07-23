@@ -1,12 +1,10 @@
 // Project placeholders
 //////////////////////////////////////////////////////
 
-// Examples
-
-%plus {
-  color: $color_success;
-}
-
-%minus {
-  color: $color_danger;
+%nooutline {
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none !important; // stylelint-disable-line declaration-no-important
+  }
 }

@@ -15,12 +15,6 @@ $image-path: "../images/";
 $color_white: #fff;
 $color_black: #000;
 
-$color_mint: #44c6a8;
-$color_cian: #22b394;
-$color_blue: #2d84c6;
-$color_green: #21b499;
-$color_red: #ef5a99;
-
 $color_orange: rgb(242, 107, 43);
 $color_orange_light: rgb(250, 153, 43);
 
@@ -28,22 +22,6 @@ $color_orange_light: rgb(250, 153, 43);
 
 $color_gray:  rgb(207, 207, 207);
 $color_gray_1:  rgb(117, 117, 117);
-
-// Main
-
-$color_main: $color_mint;
-$color_second: $color_blue;
-$color_danger: $color_red;
-$color_warning: $color_orange;
-$color_success: $color_green;
-
-// Special
-
-$color_light: #f3f3f4;
-
-$color_dark: #2f4050;
-
-$color_dark_alfa: rgba($color_dark, 0.66);
 
 // Text
 
@@ -59,14 +37,7 @@ $color_link-hover: #44529c;
 $color_shadow: rgba($color_black, 0.15);
 $color_text-shadow: $color_shadow;
 
-// Brands
-
-$color_fb: #3b5998;
-
 // Functional
-
-$color_disabled: darken($color_light, ($fade * 4)); // #9e9ea6
-$color_placeholder: $color_disabled;
 
 $color_background: rgb(218, 218, 218);
 
@@ -98,13 +69,13 @@ $text-shadow_size: 4px;
 
 $size: 20px;
 
-$input_height: $size * 2;
-
 $border-width: 2px;
 
 
 // Breackpoints and containers
 //////////////////////////////////////////////////////
+
+$breackpoint_min: 320px;
 
 // Брекпоинты между мониторами и большими мониторами
 $breackpoint_xl: 1499px;
@@ -116,7 +87,7 @@ $breackpoint_xs:                  360px !global;
 $breackpoint_xs_min:              $breackpoint_xs !global;
 
 // Small screen / SM / tablet
-$breackpoint_sm:                  768px !global;
+$breackpoint_sm:                  800px !global;
 $breackpoint_sm_min:              $breackpoint_sm !global;
 
 // Medium screen / MD desktop / нетбуки типо чтоле

@@ -1,104 +1,117 @@
 
 // Form
 
-.form-control,
-.form-select {
-  @extend %nooutline;
-  box-sizing: border-box;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: $border-width solid $color_border;
-  padding-bottom: 17px;
-  @include size(100%, 56px);
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
-}
-
-.form-select ~ .form-control {
-  pointer-events: none;
-}
-
-.form-group {
-  position: relative;
-  margin-top: 42px;
-
-  select {
-    position: absolute;
-    top: 0;
-    color: transparent;
-
-    option {
-      color: $color_text;
-    }
+.form {
+  &__control,
+  &__select {
+    @extend %nooutline;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: $border-width solid $color_border;
+    padding-bottom: 17px;
+    @include size(100%, 56px);
+    @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
   }
 
-  &__arrow {
-    position: absolute;
-    top: 10px;
-    right: 11px;
-    background: url("#{$image-path}arrow.jpg") 50% 50% no-repeat;
-    @include size(34px, 27px);
+  &__select ~ .form__control {
+    pointer-events: none;
   }
-}
 
-.form-label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  white-space: nowrap;
-  pointer-events: none;
-  color: $color_text_light;
-  transition: transform 150ms ease-out, font-size 150ms ease-out;
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
-
-  &--right {
+  &__label {
     position: absolute;
+    left: 0;
     top: 0;
-    right: 0;
+    z-index: 10;
+    white-space: nowrap;
+    pointer-events: none;
     color: $color_text_light;
+    transition: transform 150ms ease-out, font-size 150ms ease-out;
     @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
 
-    & ~ .form-control {
-      padding-right: 150px;
+    &--right {
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: $color_text_light;
+      @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+      & ~ .form__control {
+        padding-right: 150px;
+      }
+    }
+
+    &--right-bottom {
+      position: absolute;
+      bottom: -40px;
+      right: 5px;
+      color: $color_text_light;
+      @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+    }
+
+    &[required]::after {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      top: 2px;
+      right: -26px;
+      background: url("#{$image-path}star.jpg") 50% 50% no-repeat;
+      @include size(14px, 14px);
     }
   }
 
-  &--right-bottom {
-    position: absolute;
-    bottom: -40px;
-    right: 5px;
-    color: $color_text_light;
-    @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+  &__group {
+    position: relative;
+    margin-top: 42px;
+
+    select {
+      position: absolute;
+      top: 0;
+      color: transparent;
+
+      option {
+        color: $color_text;
+      }
+    }
+
+    &__arrow {
+      position: absolute;
+      top: 10px;
+      right: 11px;
+      background: url("#{$image-path}arrow.jpg") 50% 50% no-repeat;
+      @include size(34px, 27px);
+    }
+
+    &--focused {
+      .form__label {
+        transform: translateY(-80%);
+        font-size: 1.2em;
+      }
+
+      .form__control,
+      .form__select {
+        border-color: $color_gray_1;
+      }
+    }
+  }
+
+  &__group-of-group {
+    display: flex;
+
+    > :nth-of-type(2) {
+      padding-left: $size;
+      padding-right: $size;
+      white-space: nowrap;
+      @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+      line-height: 36px;
+    }
   }
 }
 
+// Others design mocks
 
-.form-label[required] {
-  &::after {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    top: 2px;
-    right: -26px;
-    background: url("#{$image-path}star.jpg") 50% 50% no-repeat;
-    @include size(14px, 14px);
-  }
-}
-
-.focused {
-  .form-label {
-    transform: translateY(-80%);
-    font-size: 1.2em;
-  }
-
-  .form-control,
-  .form-select {
-    border-color: $color_gray_1;
-  }
-}
-
-.search-wrapper {
+.search {
   position: relative;
 
   &::before {
@@ -109,18 +122,18 @@
     background: url("#{$image-path}search.jpg") 50% 50% no-repeat;
     @include size(33px, 34px);
   }
-}
 
-.search-control {
-  @extend %nooutline;
-  border-radius: 47px;
-  border: $border-width solid $color_border_light;
-  padding-left: 51px;
-  @include size(100%, 47px);
-  @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+  &__control {
+    @extend %nooutline;
+    border-radius: 47px;
+    border: $border-width solid $color_border_light;
+    padding-left: 51px;
+    @include size(100%, 47px);
+    @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
 
-  &::placeholder {
-    color: $color_border;
+    &::placeholder {
+      color: $color_border;
+    }
   }
 }
 
@@ -153,18 +166,6 @@
       border-radius: 70px;
       background: linear-gradient($color_orange_light, $color_orange);
     }
-  }
-}
-
-.form-group-group {
-  display: flex;
-
-  > div:nth-of-type(2) {
-    padding-left: $size;
-    padding-right: $size;
-    white-space: nowrap;
-    @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
-    line-height: 36px;
   }
 }
 
@@ -259,14 +260,17 @@
     }
 
     &:first-child {
+      height: 66px;
       background: url("#{$image-path}capcha.jpg") 50% 50% no-repeat;
-      @include size(215px, 66px);
+      background-size: contain;
     }
 
     &:last-child {
       @extend %nooutline;
+      height: 66px;
       text-align: center;
       @include text($font-family_sans, $font-size_normal, $font-weight_sans_regular);
+      line-height: 62px;
     }
   }
 }

@@ -14,10 +14,10 @@ const Form = (() => {
 
   const fields = {};
 
-  const controls = document.getElementsByClassName('form-control');
+  const controls = document.getElementsByClassName('form__control');
   const controlsarr = Object.keys(controls).map(k => controls[k]);
 
-  const selects = document.getElementsByClassName('form-select');
+  const selects = document.getElementsByClassName('form__select');
   const selectsarr = Object.keys(selects).map(k => selects[k]);
 
   const mores = document.getElementsByClassName('morelink');
@@ -75,7 +75,7 @@ const Form = (() => {
         logger.info('select');
         const value = element.options[element.selectedIndex].text;
         fields[element.getAttribute('for')].value = value;
-        element.closest('.form-group').classList.add('focused');
+        element.closest('.form__group').classList.add('form__group--focused');
       });
     });
 
@@ -94,16 +94,13 @@ const Form = (() => {
     controlsarr.forEach((element) => {
       element.addEventListener('focus', () => {
         logger.info('focus');
-        element.closest('.form-group').classList.add('focused');
+        element.closest('.form__group').classList.add('form__group--focused');
       });
 
       element.addEventListener('blur', () => {
         logger.info('blur');
         if (element.value === '') {
-          element.classList.remove('filled');
-          element.closest('.form-group').classList.remove('focused');
-        } else {
-          element.classList.add('filled');
+          element.closest('.form__group').classList.remove('form__group--focused');
         }
       });
     });
@@ -121,10 +118,6 @@ const Form = (() => {
         const value = input.nextElementSibling.children[0];
         value.innerHTML = counter;
       }
-    };
-
-    window.onclick = (e) => {
-      console.log(e);
     };
 
     // Сабмит формы
@@ -156,7 +149,7 @@ const Form = (() => {
           if (fields[key]) {
             if (response[key]) {
               fields[key].value = response[key];
-              fields[key].closest('.form-group').classList.add('focused');
+              fields[key].closest('.form__group').classList.add('form__group--focused');
             }
           }
         });

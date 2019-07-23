@@ -27,7 +27,7 @@ module.exports = {
     publicPath: '/',
   },
   node: {
-     fs: "empty",
+    fs: 'empty',
   },
   module: {
     rules: [

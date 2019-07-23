@@ -146,11 +146,9 @@ const Form = (() => {
       .then((response) => {
         Object.keys(response).forEach((key) => {
           fields[key] = document.getElementById(key);
-          if (fields[key]) {
-            if (response[key]) {
-              fields[key].value = response[key];
-              fields[key].closest('.form__group').classList.add('form__group--focused');
-            }
+          if (fields[key] && response[key]) {
+            fields[key].value = response[key];
+            fields[key].closest('.form__group').classList.add('form__group--focused');
           }
         });
         ready();

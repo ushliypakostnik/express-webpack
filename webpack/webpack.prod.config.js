@@ -10,7 +10,7 @@ module.exports = merge(common, {
     main: './src/index.js',
   },
   output: {
-    filename: 'js/app.min.js',
+    filename: 'app.min.js',
   },
   mode: 'production', // process.env.NODE_ENV
   target: 'web',
@@ -56,10 +56,10 @@ module.exports = merge(common, {
   plugins: [
     // extract css to templates
     new MiniCssExtractPlugin({
-      filename: 'css/styles.min.css',
+      filename: './styles.min.css',
     }),
-    // new ReplaceInFileWebpackPlugin([
-    //   { dir: 'build', files: [''], rules: [{ search: '', replace: '' }]}
-    // ]),
+    /* new ReplaceInFileWebpackPlugin([
+       { dir: 'build', files: ['xxx.html'], rules: [{ search: '" rel="stylesheet"/>', replace: '' }]},
+    ]), */
   ],
 });

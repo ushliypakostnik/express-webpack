@@ -24,7 +24,7 @@ const templates = generateHtmlPlugins(htmlDir);
 module.exports = {
   output: {
     path: path.join(__dirname, '../build'),
-    publicPath: '/',
+    publicPath: '',
   },
   node: {
     fs: 'empty',
@@ -58,13 +58,13 @@ module.exports = {
     ...templates.map((template) => {
       if (template === 'legacy') {
         return new HTMLWebpackPlugin({
-          filename: `html/${template}.html`,
+          filename: `${template}.html`,
           inject: false, // no link css
           template: path.resolve(__dirname, `../src/html/${template}.html`),
         });
       }
       return new HTMLWebpackPlugin({
-        filename: `html/${template}.html`,
+        filename: `${template}.html`,
         xhtml: true, // selfclosed tag to link css
         template: path.resolve(__dirname, `../src/html/${template}.html`),
       });

@@ -8,20 +8,13 @@ module.exports = merge(common, {
     main: ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000', './src/index.js'],
   },
   output: {
-    filename: 'js/app.js',
+    filename: 'app.js',
   },
   mode: 'development', // process.env.NODE_ENV
   target: 'web',
   devtool: '#source-map',
   module: {
     rules: [
-      // Single File Components
-      {
-        enforce: 'pre',
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-      },
       {
         enforce: 'pre',
         test: /\.js$/,

@@ -7,7 +7,7 @@ import config from '../config';
 import router from './routes/index';
 
 const app = express();
-const HTML_FILE = path.join(config.DIST_DIR, 'html/app.html');
+const HTML_FILE = path.join(config.DIST_DIR, 'app.html');
 
 if (config.CORS_ENABLED) { app.use(cors()); }
 

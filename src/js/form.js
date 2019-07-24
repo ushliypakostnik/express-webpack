@@ -4,8 +4,6 @@ import Logger from './logger';
 
 import api from './api';
 
-console.log(api);
-
 const logger = new Logger(path.basename(__filename, '.js'));
 
 const Form = (() => {

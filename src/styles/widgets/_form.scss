@@ -135,11 +135,11 @@
       padding-right: $size;
       white-space: nowrap;
       @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
-      line-height: 36px;
+      line-height: 56px;
 
       @include min {
         @include text($font-family_sans, round($font-size_xsmall * 0.66), $font-weight_sans_regular);
-        line-height: 36px;
+        line-height: 56px;
       }
     }
 
@@ -147,7 +147,8 @@
     .form__select,
     .form__label {
       @include min {
-        @include text($font-family_sans, round($font-size_small * 0.66), $font-weight_sans_regular);
+        @include text($font-family_sans, round($font-size_small * 0.75), $font-weight_sans_regular);
+        line-height: 56px;
       }
     }
   }

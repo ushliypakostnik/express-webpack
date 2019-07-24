@@ -1,7 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-// const ReplaceInFileWebpackPlugin = require('replace-in-file-webpack-plugin');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.config.js');
 
@@ -58,8 +57,5 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: './styles.min.css',
     }),
-    /* new ReplaceInFileWebpackPlugin([
-       { dir: 'build', files: ['xxx.html'], rules: [{ search: '" rel="stylesheet"/>', replace: '' }]},
-    ]), */
   ],
 });

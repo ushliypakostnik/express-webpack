@@ -7,6 +7,7 @@ Express project on Babel with Webpack bundler
 
 "Рабочий" - /build/text.txt, после запуска сервера в него пишутся изменения при работе приложения
 
+
 Deploy
 ------
 
@@ -26,13 +27,14 @@ Deploy
 Cборка
 ------
 
-Сборка статики для разработки
+Сборка статики для разработки /build
 
     $ npm run buildDev
 
-Сборка статики в продакшен
+Сборка статики в продакшен /build
 
     $ npm run buildProd
+
 
 Тесты
 -----

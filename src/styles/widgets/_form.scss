@@ -13,6 +13,11 @@
     padding-bottom: 17px;
     @include size(100%, 56px);
     @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+    @include min {
+      padding-bottom: 7px;
+      @include text($font-family_sans, round($font-size_small * $min), $font-weight_sans_regular);
+    }
   }
 
   &__select ~ .form__control {
@@ -30,12 +35,21 @@
     transition: transform 150ms ease-out, font-size 150ms ease-out;
     @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
 
+    @include min {
+      @include text($font-family_sans, round($font-size_small * $min), $font-weight_sans_regular);
+    }
+
     &--right {
       position: absolute;
       top: 0;
       right: 0;
       color: $color_text_light;
       @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+      @media (max-width: 480px) {
+        top: 30px;
+        @include text($font-family_sans, round($font-size_small * 0.66), $font-weight_sans_regular);
+      }
 
       & ~ .form__control {
         padding-right: 150px;
@@ -48,6 +62,11 @@
       right: 5px;
       color: $color_text_light;
       @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
+
+      @include min {
+        bottom: -30px;
+        @include text($font-family_sans, round($font-size_xsmall * $min), $font-weight_sans_regular);
+      }
     }
 
     &[required]::after {
@@ -81,6 +100,10 @@
       right: 11px;
       background: url("#{$image-path}arrow.jpg") 50% 50% no-repeat;
       @include size(34px, 27px);
+
+      @include min {
+        right: 0;
+      }
     }
 
     &--focused {
@@ -94,6 +117,14 @@
         border-color: $color_gray_1;
       }
     }
+
+    &--complex {
+      padding-right: 45px;
+
+      @include min {
+        padding-right: 30px;
+      }
+    }
   }
 
   &__group-of-group {
@@ -105,6 +136,19 @@
       white-space: nowrap;
       @include text($font-family_sans, $font-size_xsmall, $font-weight_sans_regular);
       line-height: 36px;
+
+      @include min {
+        @include text($font-family_sans, round($font-size_xsmall * 0.66), $font-weight_sans_regular);
+        line-height: 36px;
+      }
+    }
+
+    .form__control,
+    .form__select,
+    .form__label {
+      @include min {
+        @include text($font-family_sans, round($font-size_small * 0.66), $font-weight_sans_regular);
+      }
     }
   }
 }
@@ -113,6 +157,15 @@
 
 .search {
   position: relative;
+  padding-left: 97px;
+  padding-right: 152px;
+  padding-top: 18px;
+
+  @include min {
+    padding-left: 75px;
+    padding-right: 130px;
+    padding-top: 8px;
+  }
 
   &::before {
     content: "";
@@ -121,6 +174,11 @@
     left: 114px;
     background: url("#{$image-path}search.jpg") 50% 50% no-repeat;
     @include size(33px, 34px);
+
+    @include min {
+      top: 18px;
+      left: 90px;
+    }
   }
 
   &__control {
@@ -130,6 +188,10 @@
     padding-left: 51px;
     @include size(100%, 47px);
     @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
+
+    @include min {
+      @include text($font-family_sans, round($font-size_small * $min), $font-weight_sans_regular);
+    }
 
     &::placeholder {
       color: $color_border;
@@ -159,12 +221,17 @@
     text-align: center;
     color: $color_text_light;
     @include text($font-family_sans, $font-size_small, $font-weight_sans_regular);
-    line-height: 62px;
+    line-height: 66px;
 
     &.switch--active {
       color: $color_white;
       border-radius: 70px;
       background: linear-gradient($color_orange_light, $color_orange);
+    }
+
+    @include min {
+      @include text($font-family_sans, round($font-size_small * 0.66), $font-weight_sans_regular);
+      line-height: 66px;
     }
   }
 }
@@ -218,8 +285,6 @@
     @include text($font-family_sans, round($font-size_xsmall * 0.75), $font-weight_sans_regular);
 
     .acount-label {
-      position: relative;
-      top: -10px;
       margin-left: 69%;
       background: url("#{$image-path}pro.jpg") 50% 50% no-repeat;
       @include size(34px, 19px);
@@ -237,6 +302,10 @@
 
 .capcha {
   position: relative;
+
+  h4 {
+    padding-right: 70px;
+  }
 
   &__refresh {
     position: absolute;

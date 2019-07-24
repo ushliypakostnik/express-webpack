@@ -82,8 +82,14 @@ p {
 
 // Заголовки по умолчанию
 
+$min: 0.80;
+
 h1 {
   @include text($font-family_sans, $font-size_large, $font-weight_sans_bold);
+
+  @include min {
+    @include text($font-family_sans, round($font-size_large * $min), $font-weight_sans_bold);
+  }
 }
 
 h2 {

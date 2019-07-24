@@ -5,6 +5,11 @@
 .container-fluid {
   padding-left: 25px;
   padding-right: 25px;
+
+  @include min {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .btn-wrapper {
@@ -24,5 +29,9 @@
     padding-right: 50px;
     background: linear-gradient($color_orange_light, $color_orange);
     @include text($font-family_sans, $font-size_normal, $font-weight_sans_bold);
+  }
+
+  @include min {
+    @include text($font-family_sans, $font-size_small, $font-weight_sans_bold);
   }
 }

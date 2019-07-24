@@ -32,10 +32,16 @@
       @include size(42px, 44px);
     }
 
-    > div {
-      padding-left: 97px;
-      padding-right: 152px;
-      padding-top: 18px;
+    @include min {
+      height: 70px;
+
+      &::before {
+        top: 15px;
+      }
+
+      &::after {
+        top: 13px;
+      }
     }
   }
 
@@ -193,12 +199,29 @@
     margin-left: -20px;
     margin-right: -20px;
 
+    @include min {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
     > div {
       flex-grow: 0.6;
       height: 62px;
 
+      @include min {
+        &:not(:last-child) { // stylelint-disable-line max-nesting-depth
+          margin-right: 3%;
+        }
+      }
+
       &:nth-of-type(3) {
         flex-grow: 1;
+      }
+
+      &:nth-of-type(4) {
+        position: relative;
+        top: -4px;
+        flex-grow: 0.4;
       }
     }
   }
@@ -206,6 +229,7 @@
   @for $i from 2 to 6 {
     &__image#{$i} {
       background: url("#{$image-path}pay#{$i - 1}.jpg") 50% 50% no-repeat;
+      background-size: contain;
     }
   }
 }
